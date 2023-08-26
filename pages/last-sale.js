@@ -5,11 +5,9 @@ const fetcher = url => fetch(url).then(r => r.json())
 
 export default function LastSalesPage(){
     const [sales, setSales] = useState([]);
-    const {data, error,isLoading} = useSWR('api',fetcher)
-    console.log(data)
+    const {data, error,isLoading} = useSWR('I was using firebase api',fetcher)
 
     useEffect(() => {
-        console.log(data)
         if (data) {
           const transformedSales = [];
     
